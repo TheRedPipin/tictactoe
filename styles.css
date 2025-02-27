@@ -1,0 +1,106 @@
+body.darkMode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.darkMode .section {
+    background-color: #333333;
+    border-color: #ffffff;
+}
+
+body.darkMode #turnBox {
+    background-color: #333333;
+    border-color: #ffffff;
+}
+
+#boardContainer {
+    margin: 0 auto;
+    display: grid;
+    grid-template: "A B C" 100px "D E F" 100px "G H I" 100px / 100px 100px 100px;
+    grid-gap: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: reduceGap 2s forwards;
+}
+
+.section {
+    height: 125px;
+    width: 125px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    transition: 0.3s;
+}
+
+.section:hover {
+    background-color: #555555 !important;
+    transition: 0.3s;
+}
+
+#turnBox {
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background-color: black;
+    height: 125px;
+    width: 125px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border: none;
+    transition: 0.3s;
+}
+
+#themeSwitch {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#themeSwitch input {
+    display: none;
+}
+
+#themeSwitch label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    background: #cff528;
+}
+
+#themeSwitch label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 23px;
+    height: 23px;
+    background: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+#themeSwitch input:checked + label {
+    background: #a1a1a1;
+}
+
+#themeSwitch input:checked + label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
+
+@keyframes reduceGap {
+    0% {
+        grid-gap: 90px;
+    }
+    100% {
+        grid-gap: 40px;
+    }
+}
