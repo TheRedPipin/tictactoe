@@ -16,8 +16,7 @@ body.darkMode #turnBox {
 #boardContainer {
     margin: 0 auto;
     display: grid;
-    grid-template: "A B C" 100px "D E F" 100px "G H I" 100px / 100px 100px 100px;
-    grid-gap: 40px;
+    grid-template: "A B C" 125px "D E F" 125px "G H I" 125px / 125px 125px 125px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,12 +27,17 @@ body.darkMode #turnBox {
 .section {
     height: 125px;
     width: 125px;
+    font-size: 75px;
+    text-align: center;
+    line-height: 125px;
+    text-align: center;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border: none;
     transition: 0.3s;
+    opacity: 1;
+    transition: opacity 0.3s;
 }
-
 .section:hover {
     background-color: #555555 !important;
     transition: 0.3s;
@@ -51,6 +55,13 @@ body.darkMode #turnBox {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border: none;
     transition: 0.3s;
+}
+
+#turnText {
+    color: white;
+    font-size: 75px;
+    text-align: center;
+    line-height: 125px;
 }
 
 #themeSwitch {
@@ -101,6 +112,6 @@ body.darkMode #turnBox {
         grid-gap: 90px;
     }
     100% {
-        grid-gap: 40px;
+        grid-gap: 20px;
     }
 }
